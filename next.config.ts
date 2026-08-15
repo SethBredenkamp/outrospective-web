@@ -12,6 +12,7 @@ const NEXT_PUBLIC_SERVER_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
   : process.env.__NEXT_PRIVATE_ORIGIN || 'http://localhost:3000'
 
 const nextConfig: NextConfig = {
+  agentRules: false,
   // Temporarily required on Windows until Next.js fixes Turbopack Sass resolution.
   // See: https://github.com/vercel/next.js/issues/86431
   sassOptions: {
@@ -22,6 +23,9 @@ const nextConfig: NextConfig = {
       {
         pathname: '/api/media/file/**',
       },
+      { pathname: '/hero-butterfly.png' },
+      { pathname: '/butterfly-flight.png' },
+      { pathname: '/outrospective-3d-reference.png' },
     ],
     qualities: [100],
     remotePatterns: [

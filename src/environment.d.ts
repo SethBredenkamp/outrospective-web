@@ -1,3 +1,5 @@
+/// <reference types="next/image-types/global" />
+
 declare global {
   namespace NodeJS {
     interface ProcessEnv {

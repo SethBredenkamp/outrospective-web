@@ -7,6 +7,8 @@ import { CMSLink } from '@/components/Link'
 import { Logo } from '@/components/Logo/Logo'
 
 export async function Footer() {
+  if (!process.env.PAYLOAD_SECRET || !process.env.DATABASE_URL) return null
+
   const footerData = await getCachedGlobal('footer', 1)()
 
   const navItems = footerData?.navItems || []

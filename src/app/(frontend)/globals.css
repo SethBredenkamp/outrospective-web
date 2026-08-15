@@ -222,3 +222,70 @@ html[data-theme='dark'],
 html[data-theme='light'] {
   opacity: initial;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* The custom homepage supplies its own chrome inside the page. */
+body:has(.outrospective-site) > header,
+body:has(.outrospective-site) > footer {
+  display: none;
+}
+
+.outrospective-site {
+  --background: oklch(0.115 0.012 45);
+  --foreground: oklch(0.965 0.012 75);
+  --card: oklch(0.16 0.014 45);
+  --card-foreground: var(--foreground);
+  --popover: oklch(0.16 0.014 45);
+  --popover-foreground: var(--foreground);
+  --primary: oklch(0.72 0.18 48);
+  --primary-foreground: oklch(0.13 0.015 40);
+  --secondary: oklch(0.2 0.014 45);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.2 0.014 45);
+  --muted-foreground: oklch(0.7 0.015 70);
+  --accent: oklch(0.72 0.18 48);
+  --accent-foreground: oklch(0.13 0.015 40);
+  --border: oklch(0.32 0.02 50 / 0.75);
+  --input: oklch(0.28 0.02 50);
+  --ring: oklch(0.72 0.18 48);
+  --surface: oklch(0.15 0.014 45);
+  --ink: oklch(0.13 0.015 40);
+  --gradient-ember: linear-gradient(135deg, oklch(0.79 0.16 69), oklch(0.66 0.21 39));
+  --shadow-deep: 0 2rem 6rem oklch(0 0 0 / 0.38);
+  isolation: isolate;
+}
+
+.outrospective-site .display {
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-weight: 750;
+  letter-spacing: -0.055em;
+}
+
+.outrospective-site .ember-gradient {
+  background-image: var(--gradient-ember);
+}
+
+.outrospective-site .text-3d {
+  color: var(--foreground);
+  text-shadow:
+    0 1px 0 oklch(0.7 0.05 60),
+    0 6px 20px oklch(0 0 0 / 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .outrospective-site *,
+  .outrospective-site *::before,
+  .outrospective-site *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
