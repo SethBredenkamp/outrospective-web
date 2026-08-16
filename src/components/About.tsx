@@ -1,20 +1,22 @@
-import { Award } from "lucide-react";
-import Image from 'next/image'
-import founder from '@/endpoints/seed/image-post1.webp'
-import pioneers from '@/endpoints/seed/image-post3.webp'
+import { ArrowUpRight } from "lucide-react";
+import { Reveal } from "./Reveal";
 
 export function About() {
   return (
-    <section id="about" className="relative overflow-hidden px-6 py-28 lg:px-10">
-      <div className="pointer-events-none absolute -right-72 top-8 size-[40rem] rounded-full ember-gradient opacity-35" />
-      <div className="mx-auto max-w-[1400px]">
-        <h2 className="display mb-14 text-[clamp(2.2rem,5vw,4.8rem)] text-foreground">
-          Where Perspective Becomes Progress.
-        </h2>
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center">
-          <div>
-            <span className="display text-5xl text-foreground">Pioneers</span>
-            <p className="mt-6 text-base leading-8 text-muted-foreground">
+    <section id="about" className="relative overflow-hidden px-6 py-28 lg:px-10 lg:py-40">
+      <div className="brand-orbit pointer-events-none absolute -right-[24rem] top-12 size-[52rem] opacity-70" />
+      <div className="relative mx-auto max-w-[1400px]">
+        <Reveal>
+          <p className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-primary">Our perspective</p>
+          <h2 className="display mt-5 max-w-5xl text-[clamp(3rem,6.4vw,6.5rem)] leading-[0.94] text-foreground">
+            Where Perspective<br />Becomes Progress.
+          </h2>
+        </Reveal>
+        <div className="mt-16 grid items-stretch gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
+          <Reveal>
+            <div className="flex h-full flex-col rounded-[2rem] border border-white/[0.08] bg-[var(--surface)]/72 p-8 shadow-[0_2rem_6rem_oklch(0_0_0/0.16)] sm:p-10 lg:p-12">
+              <span className="display text-[clamp(2.3rem,4vw,4rem)] text-foreground">Pioneers</span>
+              <p className="mt-7 text-[0.98rem] leading-8 text-foreground/62">
               The name was a rather happy accident — born on a stage race trail run with a good
               friend and co-collaborator, shaped by a favourite album, and deepened through a bit
               of research. Unlike &quot;introspective,&quot; which turns inward, outrospective is about
@@ -22,38 +24,27 @@ export function About() {
               shoes, and staying endlessly curious. It&apos;s about empathy, learning, and challenging
               our own perspectives. That ethos guides everything we do: collaborating openly,
               thinking beyond the obvious, and delivering work that truly works.
-            </p>
-            <div className="mt-8 flex items-center gap-4">
-              <div className="flex size-12 items-center justify-center rounded-full border border-border bg-[var(--surface)] text-primary">
-                <Award size={20} />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-foreground">Award-winning perspective</p>
-                <p className="text-xs text-muted-foreground">Recognised for work that moves brands and people forward.</p>
-              </div>
+              </p>
+              <a href="#contact" className="mt-10 inline-flex items-center gap-2 self-start text-xs font-semibold uppercase tracking-[0.2em] text-primary transition-colors hover:text-foreground">
+                Work with us <ArrowUpRight size={15} />
+              </a>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative min-h-80 overflow-hidden rounded-3xl border border-border">
-              <Image
-                src={founder}
-                alt="Abstract architectural form"
-                fill
-                sizes="(min-width: 1024px) 25vw, 50vw"
-                className="object-cover transition-transform duration-500 hover:scale-105"
-              />
+          <Reveal delay={0.1}>
+            <div className="relative flex min-h-[34rem] h-full flex-col justify-between overflow-hidden rounded-[2rem] border border-white/[0.08] bg-[oklch(0.095_0.01_45)] p-8 sm:p-10 lg:p-12">
+              <div className="brand-orbit absolute -bottom-52 -right-44 size-[38rem] opacity-90" />
+              <div className="absolute inset-0 hero-grain opacity-35" />
+              <div className="relative flex items-center justify-between text-[0.58rem] font-semibold uppercase tracking-[0.28em] text-foreground/42">
+                <span>Out / Look</span><span>Since 01</span>
+              </div>
+              <div className="relative">
+                <p className="display text-[clamp(4.5rem,10vw,9rem)] uppercase leading-[0.72] text-foreground">See</p>
+                <p className="display ml-[12%] text-[clamp(4.5rem,10vw,9rem)] uppercase leading-[0.82] text-transparent [-webkit-text-stroke:1px_oklch(0.965_0.012_75/0.72)]">Beyond</p>
+              </div>
+              <p className="relative max-w-xs text-sm leading-6 text-foreground/52">Empathy sharpens strategy. Curiosity opens possibility. Craft turns both into progress.</p>
             </div>
-            <div className="relative mt-8 min-h-80 overflow-hidden rounded-3xl border border-border">
-              <Image
-                src={pioneers}
-                alt="Abstract illuminated surface"
-                fill
-                sizes="(min-width: 1024px) 25vw, 50vw"
-                className="object-cover transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

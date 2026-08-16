@@ -11,11 +11,12 @@ export function Portfolio() {
     <section id="portfolio" className="relative py-8 lg:py-16">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <Reveal>
-          <div className="overflow-hidden rounded-[2.5rem] bg-[var(--ink)] shadow-[var(--shadow-deep)] ring-1 ring-border">
+          <div className="overflow-hidden rounded-[2.5rem] bg-[var(--ink)] shadow-[var(--shadow-deep)] ring-1 ring-white/[0.08]">
             <div className="flex items-end justify-between gap-6 px-8 pt-10 lg:px-14 lg:pt-14">
-              <h2 className="display text-[clamp(1.6rem,3vw,2.6rem)] text-foreground">
-                Selected Work
-              </h2>
+              <div>
+                <p className="text-[0.6rem] font-semibold uppercase tracking-[0.32em] text-primary">Proof, not promises</p>
+                <h2 className="display mt-4 text-[clamp(2.4rem,4.5vw,4.5rem)] leading-none text-foreground">Selected Work</h2>
+              </div>
               <p className="hidden max-w-xs text-xs leading-relaxed text-muted-foreground sm:block">
                 Hover a project to reveal the result.
               </p>
@@ -54,7 +55,7 @@ function ProjectRow({
       initial="rest"
       whileHover="hover"
       animate="rest"
-      className="group relative block overflow-hidden px-8 py-10 lg:px-14 lg:py-14"
+              className="group relative block overflow-hidden px-8 py-11 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary lg:px-14 lg:py-14"
     >
       <motion.span
         aria-hidden

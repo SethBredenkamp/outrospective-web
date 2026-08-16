@@ -275,6 +275,23 @@ body:has(.outrospective-site) > footer {
     0 6px 20px oklch(0 0 0 / 0.55);
 }
 
+.outrospective-site .brand-orbit {
+  background: var(--gradient-ember);
+  border-radius: 9999px;
+  -webkit-mask: radial-gradient(circle, transparent 0 53%, #000 53.5% 72%, transparent 72.5%);
+  mask: radial-gradient(circle, transparent 0 53%, #000 53.5% 72%, transparent 72.5%);
+}
+
+.outrospective-site .hero-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+.outrospective-site ::selection {
+  background: oklch(0.72 0.18 48 / 0.9);
+  color: oklch(0.13 0.015 40);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

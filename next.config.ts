@@ -23,7 +23,8 @@ const nextConfig: NextConfig = {
       {
         pathname: '/api/media/file/**',
       },
-      { pathname: '/hero-butterfly.png' },
+      { pathname: '/hero-hand-restored.png' },
+      { pathname: '/hero-butterfly-animated.png' },
       { pathname: '/butterfly-flight.png' },
       { pathname: '/outrospective-3d-reference.png' },
     ],

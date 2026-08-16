@@ -45,9 +45,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
 export const metadata: Metadata = {
   metadataBase: new URL(getServerSideURL()),
+  title: {
+    default: 'Outrospective | Beyond Perspective. Into Possibility.',
+    template: '%s | Outrospective',
+  },
+  description:
+    'Outrospective is a creative agency shaping brands, experiences, campaigns, and multi-channel strategies from Cape Town and Scotland.',
   openGraph: mergeOpenGraph(),
   twitter: {
     card: 'summary_large_image',
-    creator: '@payloadcms',
   },
 }

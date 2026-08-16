@@ -1,7 +1,7 @@
 {
   "name": "outrospective-web",
   "version": "1.0.0",
-  "description": "Website template for Payload",
+  "description": "Outrospective agency website",
   "license": "MIT",
   "type": "module",
   "scripts": {

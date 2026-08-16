@@ -4,11 +4,22 @@ import Image from 'next/image'
 const footerColumns = [
   {
     heading: "Navigation",
-    links: ["Home", "About", "Services", "Portfolio", "Insights"],
+    links: [
+      { label: "Home", href: "#top" },
+      { label: "About", href: "#about" },
+      { label: "Services", href: "#services" },
+      { label: "Portfolio", href: "#portfolio" },
+      { label: "Insights", href: "#insights" },
+    ],
   },
   {
     heading: "Company",
-    links: ["Studio", "Careers", "Press", "Contact"],
+    links: [
+      { label: "Our Story", href: "#about" },
+      { label: "Capabilities", href: "#services" },
+      { label: "Selected Work", href: "#portfolio" },
+      { label: "Contact", href: "#contact" },
+    ],
   },
 ];
 
@@ -77,11 +88,11 @@ export function Footer() {
               </span>
               {col.links.map((link) => (
                 <a
-                  key={link}
-                  href="#top"
+                  key={link.label}
+                  href={link.href}
                   className="text-sm text-muted-foreground transition-colors duration-300 hover:text-foreground"
                 >
-                  {link}
+                  {link.label}
                 </a>
               ))}
             </nav>
