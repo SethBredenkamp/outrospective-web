@@ -42,8 +42,9 @@ export function BrandMark({ compact = false, ...props }: BrandMarkProps) {
           x="1"
           y="24"
         >
+          <tspan fill="currentColor">OUTR</tspan>
           <tspan fill="var(--primary)">O</tspan>
-          <tspan fill="currentColor">UTROSPECTIVE</tspan>
+          <tspan fill="currentColor">SPECTIVE</tspan>
         </text>
       )}
     </svg>
