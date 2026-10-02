@@ -23,12 +23,12 @@ const nextConfig: NextConfig = {
       {
         pathname: '/api/media/file/**',
       },
-      { pathname: '/hero-hand-restored.png' },
+      { pathname: '/hero-hand-open-palm-v3.png' },
       { pathname: '/hero-butterfly-animated.png' },
       { pathname: '/butterfly-flight.png' },
       { pathname: '/outrospective-3d-reference.png' },
     ],
-    qualities: [100],
+    qualities: [75, 85, 100],
     remotePatterns: [
       ...[NEXT_PUBLIC_SERVER_URL /* 'https://example.com' */].map((item) => {
         const url = new URL(item)

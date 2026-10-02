@@ -20,8 +20,8 @@ export function Insights() {
 
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {insights.map((item, i) => (
-            <Reveal key={item.title} delay={i * 0.08}>
-              <Link href="/posts" className="group block">
+            <Reveal key={item.title} delay={i * 0.06} x={i % 2 === 0 ? -48 : 48} y={16}>
+              <Link href="/insights" className="group block">
                 <motion.article
                   whileHover="hover"
                   initial="rest"

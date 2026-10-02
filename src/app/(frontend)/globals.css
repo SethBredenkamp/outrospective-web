@@ -227,12 +227,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* The custom homepage supplies its own chrome inside the page. */
-body:has(.outrospective-site) > header,
-body:has(.outrospective-site) > footer {
-  display: none;
-}
-
 .outrospective-site {
   --background: oklch(0.115 0.012 45);
   --foreground: oklch(0.965 0.012 75);

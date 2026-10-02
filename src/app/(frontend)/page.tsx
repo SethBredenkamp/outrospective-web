@@ -1,6 +1,5 @@
 'use client'
 
-import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { Intro } from '@/components/Intro';
 import { LogoStrip } from '@/components/LogoStrip';
@@ -9,13 +8,13 @@ import { Services } from '@/components/Services';
 import { Portfolio } from '@/components/Portfolio';
 import { Insights } from '@/components/Insights';
 import { CtaBand } from '@/components/CtaBand';
-import { Footer } from '@/components/Footer';
+import { TransitionRail } from '@/components/TransitionRail';
 
 export default function Page() {
   return (
-    <main className="outrospective-site min-h-screen overflow-hidden bg-background text-foreground">
-      <Header />
+    <main className="min-h-screen overflow-hidden">
       <Hero />
+      <TransitionRail />
       <LogoStrip />
       <Intro />
       <Portfolio />
@@ -23,7 +22,6 @@ export default function Page() {
       <About />
       <Insights />
       <CtaBand />
-      <Footer />
     </main>
   )
 }

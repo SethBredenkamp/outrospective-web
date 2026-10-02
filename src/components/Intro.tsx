@@ -9,8 +9,9 @@ export function Intro() {
           <div className="max-w-sm lg:pl-8">
             <p className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-primary">Outward by design</p>
             <p className="mt-6 text-sm leading-7 text-foreground/68">
-              We bring strategy, design and technology into one connected practice—shaping brands
-              and experiences that earn attention, build trust and create momentum.
+              Outrospective is a deliberately senior, hands-on partner for leaders navigating
+              growth, change and reinvention. Strategy, identity, experience and technology stay
+              connected from the first difficult question to the final working system.
             </p>
             <div className="mt-9 grid grid-cols-3 gap-4 border-t border-white/10 pt-5 text-[0.62rem] uppercase tracking-[0.2em] text-foreground/48">
               <span>Brand</span><span>Product</span><span>Network</span>
@@ -19,9 +20,9 @@ export function Intro() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="display text-[clamp(2.8rem,5.8vw,5.6rem)] leading-[0.96] text-foreground">
-            Different thinking.
+            See the whole picture.
             <br />
-            Meaningful impact.
+            Make the next move count.
           </h2>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
